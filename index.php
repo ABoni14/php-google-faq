@@ -22,7 +22,9 @@ $faqs = [
   ]
 ];
 
-$nav = ["Introduzione", "Norme sulla privacy", "Termini di servizio", "Tecnologie", "Domande frequenti"]
+$nav = ["Introduzione", "Norme sulla privacy", "Termini di servizio", "Tecnologie", "Domande frequenti"];
+
+$footer = ["Google", "Tutto su Google", "Privacy", "Termini"]
 ?>
 
 <!DOCTYPE html>
@@ -54,8 +56,8 @@ $nav = ["Introduzione", "Norme sulla privacy", "Termini di servizio", "Tecnologi
         <?php }?>
       </ul>
     </div>
-    
   </header>
+
   <main>
     <div class="container">
       <?php foreach($faqs as $faq){ ?>
@@ -66,5 +68,24 @@ $nav = ["Introduzione", "Norme sulla privacy", "Termini di servizio", "Tecnologi
       <?php }?>
     </div>
   </main>
+
+  <footer>
+    <div class="container contain-footer">
+        <div class="left-footer">
+          <?php foreach($footer as $itn){ ?>
+          <a href=""><?php echo $itn ?></a>
+          <?php } ?>
+        </div>
+        <div class="right-footer">
+          <i class="far fa-comment-alt"></i>
+          <select name="" id="">
+            <option value="it">Italiano</option>
+            <option value="es">Spagnolo</option>
+            <option value="en">Inglese</option>
+            <option value="de">Tedesco</option>
+          </select>
+        </div>
+    </div>
+  </footer>
 </body>
 </html>
