@@ -24,7 +24,15 @@ $faqs = [
 
 $nav = ["Introduzione", "Norme sulla privacy", "Termini di servizio", "Tecnologie", "Domande frequenti"];
 
-$footer = ["Google", "Tutto su Google", "Privacy", "Termini"]
+$footer = ["Google", "Tutto su Google", "Privacy", "Termini"];
+
+$selectLanguage = [
+  "it" => "Italiano",
+  "es" => "Spagnolo",
+  "en" => "Inglese",
+  "de" => "Tedesco"
+
+  ]
 ?>
 
 <!DOCTYPE html>
@@ -78,11 +86,10 @@ $footer = ["Google", "Tutto su Google", "Privacy", "Termini"]
         </div>
         <div class="right-footer">
           <i class="far fa-comment-alt"></i>
-          <select name="" id="">
-            <option value="it">Italiano</option>
-            <option value="es">Spagnolo</option>
-            <option value="en">Inglese</option>
-            <option value="de">Tedesco</option>
+          <select name="language" id="">
+            <?php foreach($selectLanguage as $key => $language){ ?>
+            <option value="<?php echo $key ?>"><?php echo $language?></option>
+            <?php } ?>
           </select>
         </div>
     </div>

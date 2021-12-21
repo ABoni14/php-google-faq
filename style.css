@@ -79,4 +79,9 @@ a{
   text-decoration: none;
   line-height: 50px;
   color: grey;
+  margin-left: 10px;
+}
+
+select{
+  margin-left: 10px;
 }
